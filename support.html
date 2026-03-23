@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support — Shwrk</title>
+  <meta name="description" content="Get help with Shwrk Shopify apps. Contact support, browse FAQs, and find troubleshooting guides.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%2300e59a'/><text x='5' y='23' font-size='18' font-weight='bold' font-family='sans-serif' fill='%2306090f'>S</text></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: '#06090f', surface: '#0d1117', 'surface-raised': '#151b26',
+            border: '#1e2a3a', 'border-bright': '#2a3a4e', accent: '#00e59a',
+            'accent-dim': 'rgba(0, 229, 154, 0.12)', 'text-primary': '#e2e8f0',
+            'text-muted': '#7a8ba3', 'text-faint': '#4a5568',
+          },
+          fontFamily: {
+            display: ['Syne', 'sans-serif'],
+            body: ['DM Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="noise">
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav-blur fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 text-white no-underline">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="4" fill="#00e59a"/><path d="M7 19.5V16.5L11 12L7 8.5V5.5L14 11.5V14.5L7 19.5Z" fill="#06090f"/><path d="M14 19.5V16.5L18 13L21 15.5V18.5L14 19.5Z" fill="#06090f" opacity="0.6"/></svg>
+        <span class="font-display font-bold text-lg tracking-tight">SHWRK</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#apps" class="nav-link">Apps</a>
+        <a href="support.html" class="nav-link active">Support</a>
+        <a href="privacy.html" class="nav-link">Privacy</a>
+        <a href="terms.html" class="nav-link">Terms</a>
+      </div>
+      <button id="menu-btn" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu" aria-expanded="false">
+        <span class="block w-5 h-0.5 bg-text-muted transition-all duration-200"></span>
+        <span class="block w-5 h-0.5 bg-text-muted transition-all duration-200"></span>
+        <span class="block w-5 h-0.5 bg-text-muted transition-all duration-200"></span>
+      </button>
+    </div>
+    <div id="mobile-menu" class="mobile-menu md:hidden border-t border-border">
+      <div class="px-6 py-4 flex flex-col gap-3">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#apps" class="nav-link">Apps</a>
+        <a href="support.html" class="nav-link active">Support</a>
+        <a href="privacy.html" class="nav-link">Privacy</a>
+        <a href="terms.html" class="nav-link">Terms</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <section class="hero-gradient pt-28 pb-16 border-b border-border">
+    <div class="max-w-6xl mx-auto px-6">
+      <span class="tag animate-fade-up">Help</span>
+      <h1 class="mt-6 text-3xl md:text-4xl font-display font-bold text-white animate-fade-up delay-100">
+        How can we help<span class="text-accent">?</span>
+      </h1>
+      <p class="mt-4 text-text-muted max-w-lg animate-fade-up delay-200">
+        We're here to help you get the most out of your Shwrk apps. Reach out anytime.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT OPTIONS ===== -->
+  <section class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <!-- Email Support -->
+        <div class="card p-8 scroll-reveal">
+          <div class="feature-icon rounded-lg mb-6">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="M22 4L12 13 2 4"/>
+            </svg>
+          </div>
+          <h3 class="font-display font-bold text-lg text-white">Email Support</h3>
+          <p class="mt-3 text-text-muted text-sm leading-relaxed">
+            Send us an email and we'll respond within 24 hours on business days.
+          </p>
+          <a href="mailto:support@shwrk.dev" class="mt-5 inline-flex items-center gap-2 text-accent text-sm font-mono font-medium no-underline hover:underline">
+            support@shwrk.dev
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <!-- Privacy Requests -->
+        <div class="card p-8 scroll-reveal">
+          <div class="feature-icon rounded-lg mb-6">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+          </div>
+          <h3 class="font-display font-bold text-lg text-white">Privacy & Data</h3>
+          <p class="mt-3 text-text-muted text-sm leading-relaxed">
+            For data access requests, deletion requests, or privacy-related questions.
+          </p>
+          <a href="mailto:privacy@shwrk.dev" class="mt-5 inline-flex items-center gap-2 text-accent text-sm font-mono font-medium no-underline hover:underline">
+            privacy@shwrk.dev
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <!-- Response Time -->
+        <div class="card p-8 scroll-reveal">
+          <div class="feature-icon rounded-lg mb-6">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h3 class="font-display font-bold text-lg text-white">Response Time</h3>
+          <p class="mt-3 text-text-muted text-sm leading-relaxed">
+            We aim to respond within 24 hours on business days. Critical issues are prioritized.
+          </p>
+          <span class="mt-5 inline-flex items-center gap-2 text-accent text-sm font-mono font-medium">
+            &lt; 24h typical
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Accent Divider -->
+  <div class="accent-line"></div>
+
+  <!-- ===== FAQ ===== -->
+  <section class="py-20 bg-surface">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="scroll-reveal">
+        <span class="tag">FAQ</span>
+        <h2 class="mt-6 text-2xl md:text-3xl font-display font-bold text-white">
+          Common Questions<span class="text-accent">.</span>
+        </h2>
+      </div>
+
+      <div class="mt-12 space-y-3">
+
+        <div class="faq-item rounded-lg scroll-reveal">
+          <button class="faq-toggle">
+            How do I install a Shwrk app?
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer text-text-muted text-sm leading-relaxed">
+            Visit the app's listing on the Shopify App Store and click "Add app." You'll be redirected to your Shopify admin to authorize the app's required permissions. Once approved, the app will appear in your admin sidebar.
+          </div>
+        </div>
+
+        <div class="faq-item rounded-lg scroll-reveal">
+          <button class="faq-toggle">
+            What data do your apps collect?
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer text-text-muted text-sm leading-relaxed">
+            Our apps collect only OAuth session data (store domain and access tokens) needed to function. We do not store customer personal data. All discount configurations are stored as Shopify metafields. See our <a href="privacy.html" class="text-accent hover:underline">Privacy Policy</a> for full details.
+          </div>
+        </div>
+
+        <div class="faq-item rounded-lg scroll-reveal">
+          <button class="faq-toggle">
+            Will your apps slow down my store?
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer text-text-muted text-sm leading-relaxed">
+            No. Our apps use Shopify Functions, which run on Shopify's edge infrastructure, not on your storefront. There are no JavaScript files injected into your theme. Your Lighthouse performance score will not be affected.
+          </div>
+        </div>
+
+        <div class="faq-item rounded-lg scroll-reveal">
+          <button class="faq-toggle">
+            How do I uninstall an app?
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer text-text-muted text-sm leading-relaxed">
+            Go to your Shopify admin, navigate to Settings &gt; Apps and sales channels, find the app, and click "Remove." All session data is automatically deleted when you uninstall. Any active discounts created by the app will be deactivated.
+          </div>
+        </div>
+
+        <div class="faq-item rounded-lg scroll-reveal">
+          <button class="faq-toggle">
+            Can I request my data be deleted?
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer text-text-muted text-sm leading-relaxed">
+            Yes. Contact us at <a href="mailto:privacy@shwrk.dev" class="text-accent hover:underline">privacy@shwrk.dev</a> and we will process your request within 30 days. If you uninstall the app, all data is automatically deleted.
+          </div>
+        </div>
+
+        <div class="faq-item rounded-lg scroll-reveal">
+          <button class="faq-toggle">
+            How do I configure DiscountIQ discounts?
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer text-text-muted text-sm leading-relaxed">
+            Open DiscountIQ from your Shopify admin sidebar. Click "Create Discount" and choose your discount type (volume, order tier, VIP, or shipping). Follow the step-by-step wizard to configure tiers, thresholds, and conditions. Preview your discount before saving.
+          </div>
+        </div>
+
+        <div class="faq-item rounded-lg scroll-reveal">
+          <button class="faq-toggle">
+            How does LinkGuard find broken links?
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer text-text-muted text-sm leading-relaxed">
+            LinkGuard scans all your product descriptions, pages, blog articles, and navigation menus for internal links. It then checks each link against your store's resources using the Shopify API to detect 404 errors, links to archived products, and links to unpublished content. You can fix issues directly with one-click URL redirects or by editing the source content.
+          </div>
+        </div>
+
+        <div class="faq-item rounded-lg scroll-reveal">
+          <button class="faq-toggle">
+            What does SeoAudit check for?
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer text-text-muted text-sm leading-relaxed">
+            SeoAudit scans all your products, pages, blog articles, and collections for SEO issues. It checks for missing meta titles and descriptions, overly long titles, short descriptions, missing image alt text, and thin content (pages with fewer than 300 words). You get an overall SEO health score from 0-100 and a prioritized list of issues to fix.
+          </div>
+        </div>
+
+        <div class="faq-item rounded-lg scroll-reveal">
+          <button class="faq-toggle">
+            What kind of tag issues does TagTidy detect?
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer text-text-muted text-sm leading-relaxed">
+            TagTidy detects four types of tag issues: <strong>Case duplicates</strong> (e.g., "Summer-Sale" vs "summer-sale"), <strong>Near-duplicates</strong> (typos like "t-shirt" vs "tshirt"), <strong>Single-use tags</strong> (tags on only one product), and <strong>Unused tags</strong> (tags not on any products). You can merge duplicates into a canonical tag, delete unused tags, or dismiss issues you want to keep.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="border-t border-border py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-10">
+        <div class="md:col-span-1">
+          <a href="index.html" class="flex items-center gap-2 text-white no-underline">
+            <svg width="24" height="24" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="4" fill="#00e59a"/><path d="M7 19.5V16.5L11 12L7 8.5V5.5L14 11.5V14.5L7 19.5Z" fill="#06090f"/><path d="M14 19.5V16.5L18 13L21 15.5V18.5L14 19.5Z" fill="#06090f" opacity="0.6"/></svg>
+            <span class="font-display font-bold text-sm tracking-tight">SHWRK</span>
+          </a>
+          <p class="mt-4 text-text-faint text-sm leading-relaxed">Shopify apps that work.</p>
+        </div>
+        <div>
+          <h4 class="font-display font-bold text-sm text-text-muted uppercase tracking-wider mb-4">Apps</h4>
+          <ul class="space-y-2">
+            <li><a href="apps/discountiq.html" class="text-text-faint text-sm hover:text-accent transition-colors no-underline">DiscountIQ</a></li>
+            <li><a href="apps/linkguard.html" class="text-text-faint text-sm hover:text-accent transition-colors no-underline">LinkGuard</a></li>
+            <li><a href="apps/tagtidy.html" class="text-text-faint text-sm hover:text-accent transition-colors no-underline">TagTidy</a></li>
+            <li><a href="apps/seoaudit.html" class="text-text-faint text-sm hover:text-accent transition-colors no-underline">SeoAudit</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-display font-bold text-sm text-text-muted uppercase tracking-wider mb-4">Legal</h4>
+          <ul class="space-y-2">
+            <li><a href="privacy.html" class="text-text-faint text-sm hover:text-accent transition-colors no-underline">Privacy Policy</a></li>
+            <li><a href="terms.html" class="text-text-faint text-sm hover:text-accent transition-colors no-underline">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-display font-bold text-sm text-text-muted uppercase tracking-wider mb-4">Support</h4>
+          <ul class="space-y-2">
+            <li><a href="support.html" class="text-text-faint text-sm hover:text-accent transition-colors no-underline">Contact Us</a></li>
+            <li><a href="mailto:support@shwrk.dev" class="text-text-faint text-sm hover:text-accent transition-colors no-underline">support@shwrk.dev</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="accent-line mt-12 mb-8"></div>
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-text-faint text-xs font-mono">&copy; 2026 Shwrk. All rights reserved.</p>
+        <p class="text-text-faint text-xs font-mono">Built for the Shopify ecosystem</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

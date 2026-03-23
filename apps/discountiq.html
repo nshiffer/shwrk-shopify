@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DiscountIQ — Intelligent Discount Management | Shwrk</title>
+  <meta name="description" content="DiscountIQ: Smart discount management for Shopify. Volume tiers, VIP pricing, order-based discounts, and automated shipping deals. Zero storefront impact.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%2300e59a'/><text x='5' y='23' font-size='18' font-weight='bold' font-family='sans-serif' fill='%2306090f'>S</text></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: '#06090f', surface: '#0d1117', 'surface-raised': '#151b26',
+            border: '#1e2a3a', 'border-bright': '#2a3a4e', accent: '#00e59a',
+            'accent-dim': 'rgba(0, 229, 154, 0.12)', 'text-primary': '#e2e8f0',
+            'text-muted': '#7a8ba3', 'text-faint': '#4a5568',
+          },
+          fontFamily: {
+            display: ['Syne', 'sans-serif'],
+            body: ['DM Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="noise">
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav-blur fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-3 text-white no-underline">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="4" fill="#00e59a"/><path d="M7 19.5V16.5L11 12L7 8.5V5.5L14 11.5V14.5L7 19.5Z" fill="#06090f"/><path d="M14 19.5V16.5L18 13L21 15.5V18.5L14 19.5Z" fill="#06090f" opacity="0.6"/></svg>
+        <span class="font-display font-bold text-lg tracking-tight">SHWRK</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../index.html#apps" class="nav-link active">Apps</a>
+        <a href="../support.html" class="nav-link">Support</a>
+        <a href="../privacy.html" class="nav-link">Privacy</a>
+        <a href="../terms.html" class="nav-link">Terms</a>
+      </div>
+      <button id="menu-btn" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu" aria-expanded="false">
+        <span class="block w-5 h-0.5 bg-text-muted transition-all duration-200"></span>
+        <span class="block w-5 h-0.5 bg-text-muted transition-all duration-200"></span>
+        <span class="block w-5 h-0.5 bg-text-muted transition-all duration-200"></span>
+      </button>
+    </div>
+    <div id="mobile-menu" class="mobile-menu md:hidden border-t border-border">
+      <div class="px-6 py-4 flex flex-col gap-3">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../index.html#apps" class="nav-link active">Apps</a>
+        <a href="../support.html" class="nav-link">Support</a>
+        <a href="../privacy.html" class="nav-link">Privacy</a>
+        <a href="../terms.html" class="nav-link">Terms</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero-gradient grid-bg pt-28 pb-20 border-b border-border">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-col lg:flex-row lg:items-center gap-12 lg:gap-20">
+        <!-- Left: Content -->
+        <div class="flex-1">
+          <div class="flex items-center gap-3 animate-fade-up">
+            <div class="w-12 h-12 rounded-lg bg-accent-dim border border-accent/20 flex items-center justify-center">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00e59a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                <path d="M2 17l10 5 10-5"/>
+                <path d="M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <span class="tag">Shopify App</span>
+          </div>
+
+          <h1 class="mt-8 text-4xl sm:text-5xl md:text-6xl font-display font-extrabold text-white leading-[1.05] animate-fade-up delay-100">
+            DiscountIQ
+          </h1>
+          <p class="mt-2 text-xl md:text-2xl font-display text-accent animate-fade-up delay-200">
+            Intelligent discount management.
+          </p>
+
+          <p class="mt-6 text-text-muted max-w-lg leading-relaxed animate-fade-up delay-300">
+            Create sophisticated automatic discounts without code. Volume tiers, VIP customer pricing, order-based deals, and free shipping rules — all powered by Shopify Functions with zero storefront impact.
+          </p>
+
+          <div class="mt-10 flex flex-wrap gap-4 animate-fade-up delay-400">
+            <a href="#" class="btn-primary">
+              Install on Shopify
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#features" class="btn-secondary">See Features</a>
+          </div>
+        </div>
+
+        <!-- Right: Visual -->
+        <div class="flex-1 animate-fade-up delay-500">
+          <div class="glow-box rounded-lg p-6 bg-surface">
+            <!-- Mock Dashboard Preview -->
+            <div class="flex items-center gap-2 mb-4">
+              <div class="w-3 h-3 rounded-full bg-red-500/60"></div>
+              <div class="w-3 h-3 rounded-full bg-yellow-500/60"></div>
+              <div class="w-3 h-3 rounded-full bg-green-500/60"></div>
+              <span class="ml-3 text-text-faint text-xs font-mono">discountiq dashboard</span>
+            </div>
+            <div class="space-y-3">
+              <!-- Mock discount rows -->
+              <div class="flex items-center justify-between bg-surface-raised border border-border rounded px-4 py-3">
+                <div class="flex items-center gap-3">
+                  <div class="w-2 h-2 rounded-full bg-green-400"></div>
+                  <span class="text-text-primary text-sm font-medium">Summer Volume Deal</span>
+                </div>
+                <span class="text-accent text-xs font-mono">volume</span>
+              </div>
+              <div class="flex items-center justify-between bg-surface-raised border border-border rounded px-4 py-3">
+                <div class="flex items-center gap-3">
+                  <div class="w-2 h-2 rounded-full bg-green-400"></div>
+                  <span class="text-text-primary text-sm font-medium">VIP Gold Members</span>
+                </div>
+                <span class="text-accent text-xs font-mono">vip</span>
+              </div>
+              <div class="flex items-center justify-between bg-surface-raised border border-border rounded px-4 py-3">
+                <div class="flex items-center gap-3">
+                  <div class="w-2 h-2 rounded-full bg-yellow-400"></div>
+                  <span class="text-text-primary text-sm font-medium">Free Ship $75+</span>
+                </div>
+                <span class="text-accent text-xs font-mono">shipping</span>
+              </div>
+              <div class="flex items-center justify-between bg-surface-raised border border-border rounded px-4 py-3">
+                <div class="flex items-center gap-3">
+                  <div class="w-2 h-2 rounded-full bg-text-faint"></div>
+                  <span class="text-text-muted text-sm font-medium">Spend $100 Save 15%</span>
+                </div>
+                <span class="text-text-faint text-xs font-mono">order-tier</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES ===== -->
+  <section id="features" class="py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="scroll-reveal">
+        <span class="tag">Features</span>
+        <h2 class="mt-6 text-3xl md:text-4xl font-display font-bold text-white">
+          Four discount strategies<span class="text-accent">,</span><br>one app<span class="text-accent">.</span>
+        </h2>
+      </div>
+
+      <div class="mt-14 grid md:grid-cols-2 gap-6">
+
+        <!-- Volume Discounts -->
+        <div class="card p-8 scroll-reveal">
+          <div class="flex items-center gap-4 mb-5">
+            <div class="feature-icon rounded-lg">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="15" rx="2" ry="2"/>
+                <polyline points="17 2 12 7 7 2"/>
+              </svg>
+            </div>
+            <h3 class="font-display font-bold text-lg text-white">Volume Discounts</h3>
+          </div>
+          <p class="text-text-muted text-sm leading-relaxed">
+            Set per-product tiered pricing. Buy 5, get 10% off. Buy 10, get 20% off. Configure as many tiers as you need per product. Customers automatically get the best price based on their cart quantity.
+          </p>
+          <div class="mt-5 p-3 bg-surface-raised border border-border rounded font-mono text-xs text-text-faint">
+            <div class="flex justify-between"><span>qty &gt;= 5</span><span class="text-accent">-10%</span></div>
+            <div class="flex justify-between mt-1"><span>qty &gt;= 10</span><span class="text-accent">-20%</span></div>
+            <div class="flex justify-between mt-1"><span>qty &gt;= 25</span><span class="text-accent">-30%</span></div>
+          </div>
+        </div>
+
+        <!-- Order Tier Discounts -->
+        <div class="card p-8 scroll-reveal">
+          <div class="flex items-center gap-4 mb-5">
+            <div class="feature-icon rounded-lg">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+              </svg>
+            </div>
+            <h3 class="font-display font-bold text-lg text-white">Order Tier Discounts</h3>
+          </div>
+          <p class="text-text-muted text-sm leading-relaxed">
+            Reward bigger carts with tiered discounts based on order subtotal. Encourage customers to spend more with progressively better deals at each threshold.
+          </p>
+          <div class="mt-5 p-3 bg-surface-raised border border-border rounded font-mono text-xs text-text-faint">
+            <div class="flex justify-between"><span>spend $50+</span><span class="text-accent">-5%</span></div>
+            <div class="flex justify-between mt-1"><span>spend $100+</span><span class="text-accent">-10%</span></div>
+            <div class="flex justify-between mt-1"><span>spend $200+</span><span class="text-accent">-15%</span></div>
+          </div>
+        </div>
+
+        <!-- VIP Customer Discounts -->
+        <div class="card p-8 scroll-reveal">
+          <div class="flex items-center gap-4 mb-5">
+            <div class="feature-icon rounded-lg">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+            </div>
+            <h3 class="font-display font-bold text-lg text-white">VIP Customer Discounts</h3>
+          </div>
+          <p class="text-text-muted text-sm leading-relaxed">
+            Automatically give extra discounts to customers with specific tags. Reward your most loyal customers, wholesale buyers, or any segment you define using Shopify customer tags.
+          </p>
+          <div class="mt-5 p-3 bg-surface-raised border border-border rounded font-mono text-xs text-text-faint">
+            <div class="flex justify-between"><span>tag: "vip-gold"</span><span class="text-accent">-15%</span></div>
+            <div class="flex justify-between mt-1"><span>tag: "wholesale"</span><span class="text-accent">-25%</span></div>
+          </div>
+        </div>
+
+        <!-- Shipping Discounts -->
+        <div class="card p-8 scroll-reveal">
+          <div class="flex items-center gap-4 mb-5">
+            <div class="feature-icon rounded-lg">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="3" width="15" height="13"/>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                <circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+              </svg>
+            </div>
+            <h3 class="font-display font-bold text-lg text-white">Shipping Discounts</h3>
+          </div>
+          <p class="text-text-muted text-sm leading-relaxed">
+            Offer free or discounted shipping when customers hit a spending threshold. One of the most effective conversion tools — remove the #1 reason for cart abandonment.
+          </p>
+          <div class="mt-5 p-3 bg-surface-raised border border-border rounded font-mono text-xs text-text-faint">
+            <div class="flex justify-between"><span>subtotal &gt;= $75</span><span class="text-accent">free shipping</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Accent Divider -->
+  <div class="accent-line"></div>
+
+  <!-- ===== TECHNICAL DETAILS ===== -->
+  <section class="py-24 bg-surface">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="scroll-reveal">
+        <span class="tag">Under the Hood</span>
+        <h2 class="mt-6 text-3xl md:text-4xl font-display font-bold text-white">
+          Built right<span class="text-accent">.</span>
+        </h2>
+      </div>
+
+      <div class="mt-14 grid md:grid-cols-3 gap-8">
+        <div class="scroll-reveal">
+          <h3 class="font-display font-bold text-white mb-3">Shopify Functions</h3>
+          <p class="text-text-muted text-sm leading-relaxed">
+            Discounts execute on Shopify's edge infrastructure using WebAssembly-powered Functions. No external API calls at checkout. Sub-millisecond execution.
+          </p>
+        </div>
+        <div class="scroll-reveal">
+          <h3 class="font-display font-bold text-white mb-3">Zero Storefront Impact</h3>
+          <p class="text-text-muted text-sm leading-relaxed">
+            No JavaScript injected into your theme. No impact on Lighthouse scores. Your store stays fast because discount logic runs server-side on Shopify's infrastructure.
+          </p>
+        </div>
+        <div class="scroll-reveal">
+          <h3 class="font-display font-bold text-white mb-3">Privacy-First</h3>
+          <p class="text-text-muted text-sm leading-relaxed">
+            We store nothing beyond OAuth sessions. Customer tags are read at runtime, never persisted. Discount configs live as Shopify metafields. Full GDPR compliance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PERMISSIONS ===== -->
+  <section class="py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="scroll-reveal">
+        <span class="tag">Permissions</span>
+        <h2 class="mt-6 text-2xl md:text-3xl font-display font-bold text-white">
+          What DiscountIQ accesses<span class="text-accent">.</span>
+        </h2>
+        <p class="mt-4 text-text-muted max-w-lg">
+          We request only the scopes necessary for the app to function. Nothing extra.
+        </p>
+      </div>
+
+      <div class="mt-10 space-y-3 max-w-2xl">
+        <div class="flex items-start gap-4 bg-surface border border-border rounded-lg p-5 scroll-reveal">
+          <div class="text-accent mt-0.5">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>
+            <div class="font-mono text-sm text-white">read_discounts, write_discounts</div>
+            <div class="text-text-muted text-sm mt-1">Create, update, activate, deactivate, and delete discount configurations.</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-surface border border-border rounded-lg p-5 scroll-reveal">
+          <div class="text-accent mt-0.5">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>
+            <div class="font-mono text-sm text-white">read_products</div>
+            <div class="text-text-muted text-sm mt-1">Display product names and variants when configuring volume discounts.</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-surface border border-border rounded-lg p-5 scroll-reveal">
+          <div class="text-accent mt-0.5">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>
+            <div class="font-mono text-sm text-white">read_customers</div>
+            <div class="text-text-muted text-sm mt-1">Read customer tags at checkout for VIP discount eligibility. Tags are never stored.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="py-20 border-t border-border">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-display font-bold text-white scroll-reveal">
+        Ready to get started<span class="text-accent">?</span>
+      </h2>
+      <p class="mt-4 text-text-muted max-w-md mx-auto scroll-reveal">
+        Install DiscountIQ and set up your first discount in minutes.
+      </p>
+      <div class="mt-8 flex justify-center gap-4 scroll-reveal">
+        <a href="#" class="btn-primary">
+          Install on Shopify
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="../support.html" class="btn-secondary">Get Help</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="border-t border-border py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-10">
+        <div class="md:col-span-1">
+          <a href="../index.html" class="flex items-center gap-2 text-white no-underline">
+            <svg width="24" height="24" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="4" fill="#00e59a"/><path d="M7 19.5V16.5L11 12L7 8.5V5.5L14 11.5V14.5L7 19.5Z" fill="#06090f"/><path d="M14 19.5V16.5L18 13L21 15.5V18.5L14 19.5Z" fill="#06090f" opacity="0.6"/></svg>
+            <span class="font-display font-bold text-sm tracking-tight">SHWRK</span>
+          </a>
+          <p class="mt-4 text-text-faint text-sm leading-relaxed">Shopify apps that work.</p>
+        </div>
+        <div>
+          <h4 class="font-display font-bold text-sm text-text-muted uppercase tracking-wider mb-4">Apps</h4>
+          <ul class="space-y-2">
+            <li><a href="discountiq.html" class="text-text-faint text-sm hover:text-accent transition-colors no-underline">DiscountIQ</a></li>
+            <li><a href="linkguard.html" class="text-text-faint text-sm hover:text-accent transition-colors no-underline">LinkGuard</a></li>
+            <li><a href="tagtidy.html" class="text-text-faint text-sm hover:text-accent transition-colors no-underline">TagTidy</a></li>
+            <li><a href="seoaudit.html" class="text-text-faint text-sm hover:text-accent transition-colors no-underline">SeoAudit</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-display font-bold text-sm text-text-muted uppercase tracking-wider mb-4">Legal</h4>
+          <ul class="space-y-2">
+            <li><a href="../privacy.html" class="text-text-faint text-sm hover:text-accent transition-colors no-underline">Privacy Policy</a></li>
+            <li><a href="../terms.html" class="text-text-faint text-sm hover:text-accent transition-colors no-underline">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-display font-bold text-sm text-text-muted uppercase tracking-wider mb-4">Support</h4>
+          <ul class="space-y-2">
+            <li><a href="../support.html" class="text-text-faint text-sm hover:text-accent transition-colors no-underline">Contact Us</a></li>
+            <li><a href="mailto:support@shwrk.dev" class="text-text-faint text-sm hover:text-accent transition-colors no-underline">support@shwrk.dev</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="accent-line mt-12 mb-8"></div>
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-text-faint text-xs font-mono">&copy; 2026 Shwrk. All rights reserved.</p>
+        <p class="text-text-faint text-xs font-mono">Built for the Shopify ecosystem</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
