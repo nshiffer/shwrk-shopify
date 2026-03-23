@@ -2,25 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Main Pages -->
   <url>
-    <loc>https://shopify.shwrk.com/index.html</loc>
+    <loc>https://apps.shwrk.com/index.html</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://shopify.shwrk.com/support.html</loc>
+    <loc>https://apps.shwrk.com/support.html</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://shopify.shwrk.com/privacy.html</loc>
+    <loc>https://apps.shwrk.com/privacy.html</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://shopify.shwrk.com/terms.html</loc>
+    <loc>https://apps.shwrk.com/terms.html</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -28,25 +28,25 @@
 
   <!-- App Pages -->
   <url>
-    <loc>https://shopify.shwrk.com/apps/linkguard.html</loc>
+    <loc>https://apps.shwrk.com/apps/linkguard.html</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://shopify.shwrk.com/apps/tagtidy.html</loc>
+    <loc>https://apps.shwrk.com/apps/tagtidy.html</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://shopify.shwrk.com/apps/seoaudit.html</loc>
+    <loc>https://apps.shwrk.com/apps/seoaudit.html</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://shopify.shwrk.com/apps/discountiq.html</loc>
+    <loc>https://apps.shwrk.com/apps/discountiq.html</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -54,31 +54,31 @@
 
   <!-- SEO Content Pages -->
   <url>
-    <loc>https://shopify.shwrk.com/seo/shopify-store-maintenance-guide.html</loc>
+    <loc>https://apps.shwrk.com/seo/shopify-store-maintenance-guide.html</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://shopify.shwrk.com/seo/fix-broken-links-shopify.html</loc>
+    <loc>https://apps.shwrk.com/seo/fix-broken-links-shopify.html</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://shopify.shwrk.com/seo/clean-up-product-tags-shopify.html</loc>
+    <loc>https://apps.shwrk.com/seo/clean-up-product-tags-shopify.html</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://shopify.shwrk.com/seo/shopify-seo-checklist.html</loc>
+    <loc>https://apps.shwrk.com/seo/shopify-seo-checklist.html</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://shopify.shwrk.com/seo/shopify-automatic-discounts-guide.html</loc>
+    <loc>https://apps.shwrk.com/seo/shopify-automatic-discounts-guide.html</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

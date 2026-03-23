@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://shopify.shwrk.com/sitemap.xml
+Sitemap: https://apps.shwrk.com/sitemap.xml
